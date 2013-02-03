@@ -4,11 +4,11 @@ A Google reader plugin for Sublime Text 2.  Check your news without leaving your
 ![intro](images/intro.png)
 ##Installation
 ###Sublime Package Control
-If you are using [Sublime Package Control](http://wbond.net/sublime_packages/package_control) you can simple install Sublime Reader by searching for `Google Reader` in the package listing.
+If you are using [Sublime Package Control](http://wbond.net/sublime_packages/package_control) you can simply install Sublime Reader by searching for `Google Reader` in the package listing.
 ###Manual Install
 Download Sublime Reader from [here](https://github.com/speg/SublimeGReader/archive/master.zip) and place the entire `SublimeGReader` directory into your `Packages` directory.
 ##Setting Up
-After you install Sublime Reader you will need to provide your Google Reader credentials for authentication.  You can manually enter them in the `SublimeReader.sublime-settings` file (which you should copy to your `User` directory if you don't want it to be reset when the package is updated) or the plugin will prompt you the first time you try to use it.
+After you install Sublime Reader you will need to provide your Google Reader credentials for authentication.  You can manually enter them in the `SublimeReader.sublime-settings` file (which you should copy to your `User` directory if you don't want it to be reset when the package is updated) or the plugin will prompt you the first time you try to use it:
 ![login](images/login.png)
 ##Using Sublime Reader
 By default, Sublime Reader will check for new articles everytime you save a file:  
@@ -30,10 +30,10 @@ Sublime Reader has several options to let you customize the plugin to your likin
 ##Credits
 Many thanks go to the following:
 
-* Jon Skinner, author of Sublime Text.  Without him none of this would exist.
+* Jon Skinner, author of Sublime Text.  Without him none of this would exist!
 * Jeffery Way, whose [course](http://net.tutsplus.com/articles/news/perfect-workflow-in-sublime-text-free-course/) convinced me to go all-in with Sublime.
-* Matt Behrens, for creating and maintaining [libgreader](https://github.com/askedrelic/libgreader), the engine which drives this plugin
-* Will Bond, for creating and maintaing the [Sublime Package Control](http://wbond.net/sublime_packages/package_control)
+* Matt Behrens, for creating and maintaining [libgreader](https://github.com/askedrelic/libgreader), the engine which drives this plugin.
+* Will Bond, for creating and maintaing the [Sublime Package Control](http://wbond.net/sublime_packages/package_control).
 
 
 
