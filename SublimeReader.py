@@ -68,7 +68,7 @@ class SublimeReaderCommand(sublime_plugin.WindowCommand):
             self.buffered = False
         current_time = datetime.now()
 
-        if self.timestamp and (current_time - self.timestamp) < self.settings.get('sr_delay', 300):
+        if self.timestamp and (current_time - self.timestamp).seconds < self.settings.get('sr_delay', 300):
             self.buffered = true
         else:
             self.timestamp = current_time        
