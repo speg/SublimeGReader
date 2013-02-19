@@ -61,7 +61,6 @@ class SublimeReaderCommand(sublime_plugin.WindowCommand):
             sublime.set_timeout(lambda: self.run(will_display), 1000)
             return False
 
-        self.timestamp = current_time        
         self.view = self.window.active_view()
         self.will_display = will_display
         threads = []
@@ -71,6 +70,8 @@ class SublimeReaderCommand(sublime_plugin.WindowCommand):
 
         if self.timestamp and (current_time - self.timestamp) < self.settings.get('sr_delay', 300):
             self.buffered = true
+        else:
+            self.timestamp = current_time        
 
         if not self.buffered:
             thread = LoadThread(self)
