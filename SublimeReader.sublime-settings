@@ -4,5 +4,6 @@
     "always_check_for_new_items" : false,
    	"sublime_reader_login" : "replace with your email",
    	"sublime_reader_password": "replace with your password",
-   	"show_content": true
+   	"show_content": true,
+    "sr_delay": 300
 }
