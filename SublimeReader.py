@@ -4,7 +4,9 @@ import threading
 import webbrowser
 from libgreader import GoogleReader, ClientAuthMethod
 from HTMLParser import HTMLParser
-from datetime import datetime, timedelta
+from datetime import datetime
+
+
 class HTMLStripper(HTMLParser):
     def __init__(self):
         self.reset()
@@ -59,16 +61,16 @@ class SublimeReaderCommand(sublime_plugin.WindowCommand):
             sublime.set_timeout(lambda: self.run(will_display), 1000)
             return False
 
-        current_time = datetime.now()
-        if self.timestamp and (current_time - self.timestamp) < self.settings.get('sr_delay', 300):
-            return False
-
         self.timestamp = current_time        
         self.view = self.window.active_view()
         self.will_display = will_display
         threads = []
         if pre_save:
             self.buffered = False
+        current_time = datetime.now()
+
+        if self.timestamp and (current_time - self.timestamp) < self.settings.get('sr_delay', 300):
+            self.buffered = true
 
         if not self.buffered:
             thread = LoadThread(self)
