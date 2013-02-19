@@ -25,6 +25,7 @@ Sublime Reader has several options to let you customize the plugin to your likin
 * `sublime_reader_login` your email address
 * `sublime_reader_password` your password
 * `show_content` displays a snippet display the title
+* `sr_delay` the number of seconds before SR will fetch new stories (helpful if you are saving a lot in a short time)
 
 
 ##Credits
